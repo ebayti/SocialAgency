@@ -12,4 +12,4 @@ This experiment is coded on and for a Windows computer. Therefore, it not might 
 
 
 # Analysis folder
-This folder will include my analysis scripts for the collected data.
+This folder will include analysis scripts written to organize and analyze the data. 
