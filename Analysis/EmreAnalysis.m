@@ -2,21 +2,21 @@
 clear all; clc
 
 %% Data 
-% EmreData{i}.xxx
+% Data{i}.xxx
 
 % Absolute distances and scores
 for i=1:11
     %single
-    SingleAbsDist(:,i)=EmreData{i}.SingleParticipantDist;
-    ComputerDist(:,i)=EmreData{i}.SingleRivalDist;
+    SingleAbsDist(:,i)=Data{i}.SingleParticipantDist;
+    ComputerDist(:,i)=Data{i}.SingleRivalDist;
     %ComputerScores...
-    SingleScores(:,i)= EmreData{i}.ScoresSingle;
+    SingleScores(:,i)= Data{i}.ScoresSingle;
     
     %multi
-    MultiAbsDist(:,i)=EmreData{i}.MultiPartDist;
-    ExperimenterDist(:,i)=EmreData{i}.MultiRivalDist;
-    ExperimenterScores(:,i)= EmreData{i}.MultiScoresExperimenter;
-    MultiScores(:,i)=EmreData{i}.MultiScoresPartcipant;
+    MultiAbsDist(:,i)=Data{i}.MultiPartDist;
+    ExperimenterDist(:,i)=Data{i}.MultiRivalDist;
+    ExperimenterScores(:,i)= Data{i}.MultiScoresExperimenter;
+    MultiScores(:,i)=Data{i}.MultiScoresPartcipant;
 end
 
 % Single Player computer scores
@@ -51,15 +51,15 @@ end
 
 %Perceived performance
 for i=1:11
-    SinglePerception(:,i)= EmreData{i}.SinglePerception(:,1); %1= X(left), 4= Y (right)
-    SingleRivalOrder(:,i)= EmreData{i}.SingleRivalOrder;
-    SingleParticipantHits(:,i)=EmreData{i}.SingleParticipantHitsPresentations;
-    SingleRivalHits(:,i)=EmreData{i}.SingleComputerHitPresentations;
+    SinglePerception(:,i)= Data{i}.SinglePerception(:,1); %1= X(left), 4= Y (right)
+    SingleRivalOrder(:,i)= Data{i}.SingleRivalOrder;
+    SingleParticipantHits(:,i)=Data{i}.SingleParticipantHitsPresentations;
+    SingleRivalHits(:,i)=Data{i}.SingleComputerHitPresentations;
     
-    MultiPerception(:,i)= EmreData{i}.MultiPerception(:,1);
-    MultiPresentations(:,i)=EmreData{i}.MultiRivalOrder;
-    MultiParticipantHits(:,i)=EmreData{i}.MultiParticipantHitPresentations;
-    MultiRivalHits(:,i)=EmreData{i}.MultiComputerHitPresentations;
+    MultiPerception(:,i)= Data{i}.MultiPerception(:,1);
+    MultiPresentations(:,i)=Data{i}.MultiRivalOrder;
+    MultiParticipantHits(:,i)=Data{i}.MultiParticipantHitPresentations;
+    MultiRivalHits(:,i)=Data{i}.MultiComputerHitPresentations;
 end
 
 
@@ -298,4 +298,4 @@ MultiWhatPercent'; % selection percentage of the better option
 MultiPPBetter'; % percentage of participant being better
 
 
-%clearvars -except CorrectMulti CorrectSingle CompScore SingleDistance ComputerDistance SingleScore MultiDistance ExpDistance ExpScore MultiScore MultiScorePerpt MultiPerpDist SingleScorePerpt SinglePerpDist DiffMulti DiffSingle
+%clearvars -except CorrectMulti CorrectSingle CompScore SingleDistance ComputerDistance SingleScore MultiDistance Exp
